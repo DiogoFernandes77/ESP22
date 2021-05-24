@@ -46,7 +46,6 @@ public class ReadJSON {
     int k=0;
     while(l.hasNext()){
       voos[k] = l.next().toString();
-      //System.out.print(voos[k]);
       k++;
     }
     return voos;
@@ -107,7 +106,7 @@ public class ReadJSON {
     catch(IOException e) {
       e.printStackTrace();
     }
-    System.out.println(obj);
+    //System.out.println(obj);
   }
 
 

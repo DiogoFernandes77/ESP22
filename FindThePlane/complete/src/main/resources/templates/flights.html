@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Find The Plane</title>
+    <title>List of flights</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="main.css" media="screen" />
@@ -14,8 +14,8 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="/flights">Flights</a>
+        <li class="nav-item active">
+          <a class="nav-link" href="/flights">Flights<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/map">Map</a>
@@ -23,10 +23,10 @@
       </ul>
     </div>
   </nav>
-  <div class="container">
-    <h3> Find all the planes flying over the UK and Ireland. </h3>
-  </div>
-    <!-- <p>Get your bitcoin price <a href="/bitcoin">here</a></p>
-    <p>Compare with previous prices <a href="/history">here</a></p> -->
-  </body>
+    <div class="container">
+      <ul class="list-group" th:each="price : ${name}">
+        <li class="list-group-item list-group-item-dark" th:text="${price}"></li>
+      </ul>
+    </div>
+</body>
 </html>
