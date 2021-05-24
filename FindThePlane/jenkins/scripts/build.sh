@@ -1,11 +1,14 @@
-#!/bin/bash
 set -e
 
-cd ${FindThePlane}
-ls
-
-mvn -X -Dmaven.test.skip=true --settings ../settings.xml deploy
-
+MODULES=(
+	FindeThePlane
 	
+)
 
-
+for i in ${!MODULES[@]}; do
+	cd ${MODULES[$i]}
+	cd complete
+	
+	mvn -X -Dmaven.test.skip=true --settings ../settings.xml deploy
+	
+done
