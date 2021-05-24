@@ -1,5 +1,6 @@
 package com.example.servingwebcontent;
 
+import java.util.ArrayList;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,18 +24,26 @@ public class GreetingController {
 
 
 		model.addAttribute("name", js.getFlights());
-		return "bitcoin";
+		return "flights";
 	}
 
-	@GetMapping("/history")
+	@GetMapping("/map")
 	public String history(@RequestParam(name="name", required=false, defaultValue="idk") String name, Model model) {
 
-		//ReadJSON js = new ReadJSON();
+		ReadJSON js = new ReadJSON();
+		ArrayList<Flight> coordList = new ArrayList<Flight>();
+		String [] array = js.getFlights();
+		for(int i=0; i<array.length; i++){
+			String [] info = array[i].split(",");
+			double longitude = Double.parseDouble(info[5].toString().trim());
+    		double latitude = Double.parseDouble(info[6].toString().trim());
+			Flight f1 = new Flight(latitude, longitude);
+			System.out.print(f1);
+			coordList.add(f1);
+		}
 
-
-		model.addAttribute("name", "history");
-		return "history";
+		model.addAttribute("coords", coordList);
+		return "map";
 	}
-
 
 }
