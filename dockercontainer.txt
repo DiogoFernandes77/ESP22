@@ -1,5 +1,11 @@
 # Para gerar o novo jar
 mvnw clean install
 
-# Para dar deploy da app no docker
-docker build -f Dockerfile -t docker-spring-boot .
+Meter o kafka no docker
+$ docker-compose up
+
+Meter o main.py no docker (producer)
+$ docker build -t python-barcode .
+
+Meter a app do spring boot no docker (consumer)
+$ docker build -f Dockerfile -t docker-spring-boot .
