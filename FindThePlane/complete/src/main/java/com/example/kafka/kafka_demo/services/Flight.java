@@ -11,8 +11,8 @@ public class Flight {
     public Flight (String id, String country, double lon, double lat, double altitude){
         this.id = id.replaceAll(" ","");
         this.country = country.replaceAll(" ","");
-        this.lat = lat;
         this.lon = lon;
+        this.lat = lat;
         this.altitude = altitude;
     }
 
@@ -58,10 +58,14 @@ public class Flight {
 
     @Override
     public String toString(){
-        return "Id: " + id + ", Origin Country: " + country + ", Lat: " + lat + ", Lon: " + lon + ", Altitude: " + altitude + ";\n";
+        return "Id: " + id + ", Origin Country: " + country + ", Lon: " + lon + ", Lat: " + lat + ", Altitude: " + altitude + ";\n";
     }
 
     public String toJson(){
-        return "{ \"id\" : \"" + id + "\", \"country\" : \"" + country + "\", \"lat\" : " + lat + ", \"lon\" : " + lon + ", \"altitude\" : " + altitude + "}";
+        return "{ \"id\" : \"" + id + "\", \"country\" : \"" + country + "\", \"lon\" : " + lon + "\", \"lat\" : " + lat + ", \"altitude\" : " + altitude + "}";
+    }
+
+    public Coordinates getCoords() {
+      return new Coordinates(this.lon, this.lat);
     }
 }

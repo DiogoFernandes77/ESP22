@@ -1,19 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
   <head>
     <title>Simple Map</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <script src="/js/index.js"></script>
+    <!-- <script src="/js/index.js"></script> -->
+
 
   </head>
   <body>
-    <div id="map"></div>
+    <div id="googleMap" style="width: 100%; height: 100%;"></div>
 
-    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBk0ZnJTY4g4euP07og1_w5_5FSRcJ-y4k&callback=initMap&libraries=&v=weekly"
-      async
-    ></script>
+    <script th:inline="javascript">
+
+
+      let flights = [
+        {
+          "Latitude": [[${coords}]],
+          "Longitude": -4.658511415452493
+        },
+        {
+          "Latitude":54.632889565562664,
+          "Longitude":-5.659629353587729,
+        },
+        {
+          "Latitude": 53.0861,
+          "Longitude":-0.2802,
+        },
+        {
+          "Latitude": 50.6481,
+          "Longitude":-1.2216,
+        },
+        {
+          "Latitude": 53.5111,
+          "Longitude":-2.6738,
+        },
+        {
+          "Latitude": 53.317,
+          "Longitude":-8.5405,
+        },
+        {
+          "Latitude": 53.0631,
+          "Longitude":-2.9018,
+        }
+      ]
+
+
+      function myMap() {
+          var mapProp= {
+              center:new google.maps.LatLng(53.702116, -4.133879),
+              zoom:6,
+          };
+          var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+          /*<![CDATA[*/
+
+          flights.forEach(flight =>{
+            new google.maps.Marker({position: new google.maps.LatLng(flight.Latitude, flight.Longitude),
+                  icon: {
+                      url: 'https://mpng.subpng.com/20180414/fcq/kisspng-airplane-icon-a5-computer-icons-flight-airplane-5ad24caf000348.7365708515237316310001.jpg',
+                      scaledSize: new google.maps.Size(25, 25)
+                  }
+              }).setMap(map);
+          });
+      }
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBk0ZnJTY4g4euP07og1_w5_5FSRcJ-y4k&callback=myMap&libraries=&v=weekly"></script>
+
   </body>
 </html>
