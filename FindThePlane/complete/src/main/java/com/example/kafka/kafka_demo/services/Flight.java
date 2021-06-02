@@ -61,8 +61,12 @@ public class Flight {
         return "Id: " + id + ", Origin Country: " + country + ", Lon: " + lon + ", Lat: " + lat + ", Altitude: " + altitude + ";\n";
     }
 
-    public String toJson(){
-        return "{ \"id\" : \"" + id + "\", \"country\" : \"" + country + "\", \"lon\" : " + lon + "\", \"lat\" : " + lat + ", \"altitude\" : " + altitude + "}";
+    public String toJsonLow(){
+        return "{ \"high\" : \"false\", " + "\"id\" : \"" + id + "\", \"country\" : \"" + country + "\", \"lon\" : " + lon + ", \"lat\" : " + lat + ", \"altitude\" : " + altitude + "}";
+    }
+
+    public String toJsonHigh(){
+        return "{ \"high\" : \"true\", " +  "\"id\" : \"" + id + "\", \"country\" : \"" + country + "\", \"lon\" : " + lon + ", \"lat\" : " + lat + ", \"altitude\" : " + altitude + "}";
     }
 
     public Coordinates getCoords() {

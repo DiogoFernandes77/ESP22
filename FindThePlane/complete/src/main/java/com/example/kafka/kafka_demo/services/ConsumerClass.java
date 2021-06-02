@@ -48,7 +48,24 @@ public class ConsumerClass {
 
                 try(FileWriter fw = new FileWriter("myJson.json", true)) {
 
-                    fw.write(f1.toJson() + "\n");
+                    fw.write(f1.toJsonLow() + "\n");
+                    fw.flush();
+
+                } catch(IOException e) {
+                    e.printStackTrace();
+                }
+              }
+              if (alt > 2000) {
+                Flight f1 = new Flight(parameters[0].replaceAll("\"",""), parameters[2].replaceAll("\"",""), lon, lat, alt);
+                logger.info(String.format("--> %s", f1));
+
+                String line;
+                File file = new File("myJson.json");
+                BufferedReader br = new BufferedReader(new FileReader(file));
+
+                try(FileWriter fw = new FileWriter("myJson.json", true)) {
+
+                    fw.write(f1.toJsonHigh() + "\n");
                     fw.flush();
 
                 } catch(IOException e) {
