@@ -1,112 +1,106 @@
-{ "high" : "true", "id" : "a0f4b5", "country" : "UnitedStates", "lon" : -3.6501, "lat" : 52.325, "altitude" : 11856.72}
-{ "high" : "false", "id" : "402b1e", "country" : "UnitedKingdom", "lon" : -2.4109, "lat" : 53.4901, "altitude" : 396.24}
-{ "high" : "true", "id" : "3c4b26", "country" : "Germany", "lon" : -5.104, "lat" : 51.9463, "altitude" : 9403.08}
-{ "high" : "true", "id" : "3c656e", "country" : "Germany", "lon" : -3.841, "lat" : 53.9663, "altitude" : 11841.48}
-{ "high" : "true", "id" : "3c64c4", "country" : "Germany", "lon" : -9.9233, "lat" : 53.9729, "altitude" : 11231.88}
-{ "high" : "true", "id" : "3c656b", "country" : "Germany", "lon" : -8.5927, "lat" : 54.3735, "altitude" : 12405.36}
-{ "high" : "true", "id" : "440333", "country" : "Austria", "lon" : -1.3516, "lat" : 53.4373, "altitude" : 6172.2}
-{ "high" : "false", "id" : "407b11", "country" : "UnitedKingdom", "lon" : -0.6229, "lat" : 52.0355, "altitude" : 403.86}
-{ "high" : "true", "id" : "49410f", "country" : "Portugal", "lon" : -0.3324, "lat" : 50.8377, "altitude" : 2865.12}
-{ "high" : "true", "id" : "0d0a9a", "country" : "Mexico", "lon" : -2.0583, "lat" : 51.4823, "altitude" : 12184.38}
-{ "high" : "true", "id" : "4009da", "country" : "UnitedKingdom", "lon" : -0.7976, "lat" : 51.3476, "altitude" : 2506.98}
-{ "high" : "false", "id" : "4009d3", "country" : "UnitedKingdom", "lon" : -1.4445, "lat" : 54.5012, "altitude" : 114.3}
-{ "high" : "true", "id" : "4009d2", "country" : "UnitedKingdom", "lon" : -2.2755, "lat" : 55.9091, "altitude" : 7825.74}
-{ "high" : "true", "id" : "4009d1", "country" : "UnitedKingdom", "lon" : -1.9299, "lat" : 50.7653, "altitude" : 4320.54}
-{ "high" : "true", "id" : "43ec2b", "country" : "UnitedKingdom", "lon" : -0.9615, "lat" : 52.2037, "altitude" : 10454.64}
-{ "high" : "true", "id" : "ac3f94", "country" : "UnitedStates", "lon" : -3.8937, "lat" : 51.7687, "altitude" : 15262.86}
-{ "high" : "true", "id" : "89611c", "country" : "UnitedArabEmirates", "lon" : 0.0233, "lat" : 53.2428, "altitude" : 9845.04}
-{ "high" : "false", "id" : "403020", "country" : "UnitedKingdom", "lon" : -1.4774, "lat" : 51.6286, "altitude" : 411.48}
-{ "high" : "true", "id" : "43ed50", "country" : "UnitedKingdom", "lon" : -1.4949, "lat" : 52.7682, "altitude" : 2857.5}
-{ "high" : "true", "id" : "a4b151", "country" : "UnitedStates", "lon" : -8.4503, "lat" : 53.1795, "altitude" : 11445.24}
-{ "high" : "true", "id" : "ab2855", "country" : "UnitedStates", "lon" : -9.5017, "lat" : 53.3726, "altitude" : 11155.68}
-{ "high" : "true", "id" : "4069b3", "country" : "UnitedKingdom", "lon" : 0.885, "lat" : 50.4327, "altitude" : 5692.14}
-{ "high" : "true", "id" : "4007fa", "country" : "UnitedKingdom", "lon" : -0.0442, "lat" : 51.6009, "altitude" : 2682.24}
-{ "high" : "true", "id" : "aa8a83", "country" : "UnitedStates", "lon" : -5.2336, "lat" : 52.752, "altitude" : 11239.5}
-{ "high" : "true", "id" : "4ca9bb", "country" : "Ireland", "lon" : -9.3274, "lat" : 54.2999, "altitude" : 10561.32}
-{ "high" : "true", "id" : "4079f6", "country" : "UnitedKingdom", "lon" : -0.5111, "lat" : 52.1502, "altitude" : 6850.38}
-{ "high" : "true", "id" : "43c925", "country" : "UnitedKingdom", "lon" : -0.4981, "lat" : 53.243, "altitude" : 2758.44}
-{ "high" : "true", "id" : "400683", "country" : "UnitedKingdom", "lon" : 0.1306, "lat" : 51.2688, "altitude" : 4015.74}
-{ "high" : "false", "id" : "4079fe", "country" : "UnitedKingdom", "lon" : 0.2923, "lat" : 51.5865, "altitude" : 426.72}
-{ "high" : "true", "id" : "43ea06", "country" : "UnitedKingdom", "lon" : -0.8209, "lat" : 50.5918, "altitude" : 7162.8}
-{ "high" : "true", "id" : "a7c807", "country" : "UnitedStates", "lon" : 0.9057, "lat" : 51.948, "altitude" : 3825.24}
-{ "high" : "true", "id" : "4ca8d4", "country" : "Ireland", "lon" : -3.7962, "lat" : 51.8155, "altitude" : 11254.74}
-{ "high" : "true", "id" : "3c61e9", "country" : "Germany", "lon" : 0.7905, "lat" : 51.2403, "altitude" : 10637.52}
-{ "high" : "false", "id" : "43c8eb", "country" : "UnitedKingdom", "lon" : -2.577, "lat" : 52.7707, "altitude" : 441.96}
-{ "high" : "false", "id" : "40556f", "country" : "UnitedKingdom", "lon" : 0.4048, "lat" : 51.1756, "altitude" : 335.28}
-{ "high" : "true", "id" : "400772", "country" : "UnitedKingdom", "lon" : -3.7776, "lat" : 50.5978, "altitude" : 11871.96}
-{ "high" : "true", "id" : "4ca910", "country" : "Ireland", "lon" : -1.0864, "lat" : 53.1664, "altitude" : 12153.9}
-{ "high" : "false", "id" : "43c8e2", "country" : "UnitedKingdom", "lon" : -2.4987, "lat" : 52.5501, "altitude" : 220.98}
-{ "high" : "false", "id" : "43c8e4", "country" : "UnitedKingdom", "lon" : -2.5385, "lat" : 52.8741, "altitude" : 297.18}
-{ "high" : "false", "id" : "43c8f0", "country" : "UnitedKingdom", "lon" : -2.9961, "lat" : 52.6724, "altitude" : 281.94}
-{ "high" : "false", "id" : "43c8e6", "country" : "UnitedKingdom", "lon" : -2.5393, "lat" : 52.872, "altitude" : 213.36}
-{ "high" : "false", "id" : "43c8ce", "country" : "UnitedKingdom", "lon" : -4.5607, "lat" : 53.2615, "altitude" : 160.02}
-{ "high" : "false", "id" : "43c8d7", "country" : "UnitedKingdom", "lon" : -0.3979, "lat" : 53.0363, "altitude" : 426.72}
-{ "high" : "true", "id" : "43c8cf", "country" : "UnitedKingdom", "lon" : -3.7211, "lat" : 53.1955, "altitude" : 2926.08}
-{ "high" : "false", "id" : "43c8d3", "country" : "UnitedKingdom", "lon" : -4.3891, "lat" : 53.2475, "altitude" : 182.88}
-{ "high" : "true", "id" : "43c5e6", "country" : "UnitedKingdom", "lon" : -1.896, "lat" : 51.8417, "altitude" : 3009.9}
-{ "high" : "true", "id" : "3e5176", "country" : "Germany", "lon" : -0.3432, "lat" : 53.6326, "altitude" : 4351.02}
-{ "high" : "false", "id" : "485ec1", "country" : "KingdomoftheNetherlands", "lon" : -1.3493, "lat" : 52.8295, "altitude" : 144.78}
-{ "high" : "false", "id" : "4077c8", "country" : "UnitedKingdom", "lon" : -4.1959, "lat" : 57.4768, "altitude" : 129.54}
-{ "high" : "true", "id" : "44c06d", "country" : "Belgium", "lon" : -1.3851, "lat" : 51.4755, "altitude" : 5029.2}
-{ "high" : "true", "id" : "40787f", "country" : "UnitedKingdom", "lon" : -0.8931, "lat" : 50.3597, "altitude" : 8481.06}
-{ "high" : "false", "id" : "40781f", "country" : "UnitedKingdom", "lon" : -0.6828, "lat" : 51.463, "altitude" : 419.1}
-{ "high" : "true", "id" : "4078b8", "country" : "UnitedKingdom", "lon" : -7.4727, "lat" : 53.5992, "altitude" : 11811.0}
-{ "high" : "true", "id" : "407843", "country" : "UnitedKingdom", "lon" : -1.916, "lat" : 53.2928, "altitude" : 3947.16}
-{ "high" : "false", "id" : "4028d9", "country" : "UnitedKingdom", "lon" : -1.3625, "lat" : 52.8303, "altitude" : 266.7}
-{ "high" : "true", "id" : "ab40f8", "country" : "UnitedStates", "lon" : -7.8842, "lat" : 51.6505, "altitude" : 12115.8}
-{ "high" : "false", "id" : "4ca704", "country" : "Ireland", "lon" : -6.2903, "lat" : 53.4224, "altitude" : 167.64}
-{ "high" : "false", "id" : "404afc", "country" : "UnitedKingdom", "lon" : -4.0532, "lat" : 57.5399, "altitude" : 53.34}
-{ "high" : "true", "id" : "4d010a", "country" : "Luxembourg", "lon" : -0.9757, "lat" : 51.6709, "altitude" : 11559.54}
-{ "high" : "true", "id" : "4075b3", "country" : "UnitedKingdom", "lon" : -0.9859, "lat" : 51.3455, "altitude" : 3169.92}
-{ "high" : "false", "id" : "4ca4ed", "country" : "Ireland", "lon" : -3.4205, "lat" : 55.9337, "altitude" : 236.22}
-{ "high" : "true", "id" : "406f1c", "country" : "UnitedKingdom", "lon" : -2.0762, "lat" : 56.8702, "altitude" : 3543.3}
-{ "high" : "false", "id" : "401fa9", "country" : "UnitedKingdom", "lon" : -2.2097, "lat" : 52.8262, "altitude" : 175.26}
-{ "high" : "false", "id" : "4074bf", "country" : "UnitedKingdom", "lon" : -0.5755, "lat" : 51.246, "altitude" : 167.64}
-{ "high" : "true", "id" : "400d5b", "country" : "UnitedKingdom", "lon" : -1.3542, "lat" : 50.5871, "altitude" : 5974.08}
-{ "high" : "true", "id" : "c0173e", "country" : "Canada", "lon" : -5.1815, "lat" : 52.9561, "altitude" : 10629.9}
-{ "high" : "true", "id" : "4cafd2", "country" : "Ireland", "lon" : -5.5812, "lat" : 50.6392, "altitude" : 11536.68}
-{ "high" : "true", "id" : "407793", "country" : "UnitedKingdom", "lon" : -1.5831, "lat" : 52.5884, "altitude" : 12100.56}
-{ "high" : "true", "id" : "407799", "country" : "UnitedKingdom", "lon" : -1.1826, "lat" : 51.5607, "altitude" : 4785.36}
-{ "high" : "true", "id" : "448da1", "country" : "Belgium", "lon" : -4.4186, "lat" : 52.4101, "altitude" : 12481.56}
-{ "high" : "false", "id" : "4014f5", "country" : "UnitedKingdom", "lon" : 0.9364, "lat" : 51.7811, "altitude" : 350.52}
-{ "high" : "true", "id" : "485e2d", "country" : "KingdomoftheNetherlands", "lon" : -5.1691, "lat" : 54.2666, "altitude" : 10622.28}
-{ "high" : "true", "id" : "a07dc8", "country" : "UnitedStates", "lon" : -8.8748, "lat" : 53.3966, "altitude" : 10553.7}
-{ "high" : "true", "id" : "40747f", "country" : "UnitedKingdom", "lon" : -4.688, "lat" : 51.8461, "altitude" : 2308.86}
-{ "high" : "false", "id" : "40740e", "country" : "UnitedKingdom", "lon" : -1.7248, "lat" : 51.1536, "altitude" : 259.08}
-{ "high" : "true", "id" : "406d92", "country" : "UnitedKingdom", "lon" : -3.279, "lat" : 51.913, "altitude" : 8199.12}
-{ "high" : "false", "id" : "407424", "country" : "UnitedKingdom", "lon" : -2.2858, "lat" : 53.0223, "altitude" : 388.62}
-{ "high" : "false", "id" : "406d90", "country" : "UnitedKingdom", "lon" : -0.2997, "lat" : 51.1329, "altitude" : 480.06}
-{ "high" : "false", "id" : "406d10", "country" : "UnitedKingdom", "lon" : -0.3553, "lat" : 53.5678, "altitude" : 251.46}
-{ "high" : "true", "id" : "407463", "country" : "UnitedKingdom", "lon" : -0.4928, "lat" : 51.2806, "altitude" : 2567.94}
-{ "high" : "true", "id" : "c02876", "country" : "Canada", "lon" : -1.2692, "lat" : 51.3279, "altitude" : 4175.76}
-{ "high" : "false", "id" : "407460", "country" : "UnitedKingdom", "lon" : -2.2034, "lat" : 57.2093, "altitude" : 121.92}
-{ "high" : "true", "id" : "407462", "country" : "UnitedKingdom", "lon" : -0.8237, "lat" : 52.3453, "altitude" : 5669.28}
-{ "high" : "false", "id" : "402540", "country" : "UnitedKingdom", "lon" : -1.3578, "lat" : 52.8304, "altitude" : 205.74}
-{ "high" : "false", "id" : "45d9d3", "country" : "Denmark", "lon" : 0.8131, "lat" : 53.1429, "altitude" : 472.44}
-{ "high" : "false", "id" : "4ca336", "country" : "Ireland", "lon" : -7.9446, "lat" : 53.5495, "altitude" : 320.04}
-{ "high" : "false", "id" : "407533", "country" : "UnitedKingdom", "lon" : -1.143, "lat" : 53.7968, "altitude" : 472.44}
-{ "high" : "false", "id" : "403957", "country" : "UnitedKingdom", "lon" : 0.9969, "lat" : 52.482, "altitude" : 289.56}
-{ "high" : "true", "id" : "400c7f", "country" : "UnitedKingdom", "lon" : -1.7637, "lat" : 55.2098, "altitude" : 3467.1}
-{ "high" : "false", "id" : "406cbc", "country" : "UnitedKingdom", "lon" : -2.24, "lat" : 51.2979, "altitude" : 373.38}
-{ "high" : "true", "id" : "4ca27f", "country" : "Ireland", "lon" : -2.0046, "lat" : 51.6946, "altitude" : 7993.38}
-{ "high" : "true", "id" : "43e907", "country" : "UnitedKingdom", "lon" : -1.8558, "lat" : 52.5081, "altitude" : 4716.78}
-{ "high" : "true", "id" : "40723e", "country" : "UnitedKingdom", "lon" : -1.084, "lat" : 52.804, "altitude" : 7551.42}
-{ "high" : "true", "id" : "406b4d", "country" : "UnitedKingdom", "lon" : -3.5805, "lat" : 54.9659, "altitude" : 6576.06}
-{ "high" : "false", "id" : "40108e", "country" : "UnitedKingdom", "lon" : -3.1692, "lat" : 54.1025, "altitude" : 259.08}
-{ "high" : "true", "id" : "300490", "country" : "Italy", "lon" : -0.2456, "lat" : 50.5705, "altitude" : 8801.1}
-{ "high" : "true", "id" : "a506da", "country" : "UnitedStates", "lon" : -2.2468, "lat" : 51.834, "altitude" : 10005.06}
-{ "high" : "false", "id" : "402f2f", "country" : "UnitedKingdom", "lon" : -1.3167, "lat" : 51.848, "altitude" : 190.5}
-{ "high" : "true", "id" : "3e48e5", "country" : "Germany", "lon" : 0.5239, "lat" : 50.7812, "altitude" : 4236.72}
-{ "high" : "true", "id" : "39cf07", "country" : "France", "lon" : -7.3216, "lat" : 52.732, "altitude" : 12473.94}
-{ "high" : "false", "id" : "406071", "country" : "UnitedKingdom", "lon" : -2.7044, "lat" : 53.3291, "altitude" : 342.9}
-{ "high" : "false", "id" : "43c172", "country" : "UnitedKingdom", "lon" : -0.4584, "lat" : 52.6166, "altitude" : 251.46}
-{ "high" : "false", "id" : "407070", "country" : "UnitedKingdom", "lon" : -2.3993, "lat" : 53.4708, "altitude" : 106.68}
-{ "high" : "true", "id" : "4caad9", "country" : "Ireland", "lon" : -6.9762, "lat" : 53.2495, "altitude" : 2788.92}
-{ "high" : "false", "id" : "401a92", "country" : "UnitedKingdom", "lon" : -0.357, "lat" : 52.5666, "altitude" : 403.86}
-{ "high" : "false", "id" : "407ae2", "country" : "UnitedKingdom", "lon" : -0.9026, "lat" : 51.7437, "altitude" : 480.06}
-{ "high" : "false", "id" : "407147", "country" : "UnitedKingdom", "lon" : -0.8044, "lat" : 51.5084, "altitude" : 281.94}
-{ "high" : "true", "id" : "4cc52c", "country" : "Iceland", "lon" : -1.3179, "lat" : 53.4809, "altitude" : 12458.7}
-{ "high" : "true", "id" : "4cc52d", "country" : "Iceland", "lon" : -4.9638, "lat" : 57.0575, "altitude" : 12428.22}
-{ "high" : "true", "id" : "39856b", "country" : "France", "lon" : -4.7778, "lat" : 53.4247, "altitude" : 7627.62}
-{ "high" : "true", "id" : "406a9f", "country" : "UnitedKingdom", "lon" : 0.1166, "lat" : 51.0773, "altitude" : 2880.36}
-{ "high" : "true", "id" : "4acaa1", "country" : "Sweden", "lon" : -0.49, "lat" : 51.4775, "altitude" : 6149.34}
+{ "high" : "false", "id" : "402ab6", "country" : "United Kingdom", "lon" : -2.3693, "lat" : 53.4729, "altitude" : 190.5}
+{ "high" : "true", "id" : "4008b1", "country" : "United Kingdom", "lon" : -1.9819, "lat" : 53.5166, "altitude" : 11239.5}
+{ "high" : "true", "id" : "3c4b26", "country" : "Germany", "lon" : -2.6967, "lat" : 51.5713, "altitude" : 12161.52}
+{ "high" : "true", "id" : "424843", "country" : "United Kingdom", "lon" : -3.5069, "lat" : 55.0686, "altitude" : 12412.98}
+{ "high" : "true", "id" : "3c6447", "country" : "Germany", "lon" : -3.1366, "lat" : 53.392, "altitude" : 11948.16}
+{ "high" : "true", "id" : "5000d3", "country" : "San Marino", "lon" : -0.0802, "lat" : 50.4438, "altitude" : 9212.58}
+{ "high" : "false", "id" : "4079c8", "country" : "United Kingdom", "lon" : -2.8778, "lat" : 52.6653, "altitude" : 480.06}
+{ "high" : "true", "id" : "a1e14a", "country" : "United States", "lon" : -9.3778, "lat" : 53.0515, "altitude" : 9151.62}
+{ "high" : "false", "id" : "43c8db", "country" : "United Kingdom", "lon" : -2.7997, "lat" : 52.7797, "altitude" : 457.2}
+{ "high" : "false", "id" : "43c8d7", "country" : "United Kingdom", "lon" : -0.5262, "lat" : 53.1332, "altitude" : 365.76}
+{ "high" : "true", "id" : "4077a0", "country" : "United Kingdom", "lon" : -0.9936, "lat" : 53.6522, "altitude" : 2682.24}
+{ "high" : "true", "id" : "407834", "country" : "United Kingdom", "lon" : -1.5108, "lat" : 50.7954, "altitude" : 10591.8}
+{ "high" : "false", "id" : "407803", "country" : "United Kingdom", "lon" : -0.6967, "lat" : 51.1394, "altitude" : 487.68}
+{ "high" : "true", "id" : "ac9923", "country" : "United States", "lon" : -8.2437, "lat" : 56.5181, "altitude" : 11170.92}
+{ "high" : "true", "id" : "4ca64f", "country" : "Ireland", "lon" : -3.2266, "lat" : 52.3918, "altitude" : 7818.12}
+{ "high" : "true", "id" : "42444a", "country" : "United Kingdom", "lon" : -3.9, "lat" : 55.214, "altitude" : 10020.3}
+{ "high" : "true", "id" : "491221", "country" : "Portugal", "lon" : -0.6832, "lat" : 50.9037, "altitude" : 5372.1}
+{ "high" : "false", "id" : "4ca4ec", "country" : "Ireland", "lon" : 0.2984, "lat" : 51.9273, "altitude" : 419.1}
+{ "high" : "false", "id" : "406361", "country" : "United Kingdom", "lon" : -4.73, "lat" : 55.6194, "altitude" : 449.58}
+{ "high" : "false", "id" : "40766b", "country" : "United Kingdom", "lon" : -1.0784, "lat" : 51.6968, "altitude" : 243.84}
+{ "high" : "true", "id" : "3c70c6", "country" : "Germany", "lon" : -8.5339, "lat" : 51.7708, "altitude" : 11391.9}
+{ "high" : "true", "id" : "406ecc", "country" : "United Kingdom", "lon" : -1.9512, "lat" : 51.7029, "altitude" : 4495.8}
+{ "high" : "false", "id" : "40749f", "country" : "United Kingdom", "lon" : -0.5949, "lat" : 52.0934, "altitude" : 259.08}
+{ "high" : "true", "id" : "a8e8a0", "country" : "United States", "lon" : -1.1655, "lat" : 51.538, "altitude" : 4343.4}
+{ "high" : "true", "id" : "485b42", "country" : "Kingdom of the Netherlands", "lon" : -1.283, "lat" : 53.5887, "altitude" : 11887.2}
+{ "high" : "true", "id" : "407464", "country" : "United Kingdom", "lon" : -1.2319, "lat" : 51.0557, "altitude" : 7528.56}
+{ "high" : "true", "id" : "a899a2", "country" : "United States", "lon" : -4.0022, "lat" : 52.5076, "altitude" : 11193.78}
+{ "high" : "true", "id" : "40756d", "country" : "United Kingdom", "lon" : -6.4733, "lat" : 58.0269, "altitude" : 12115.8}
+{ "high" : "true", "id" : "4ca27f", "country" : "Ireland", "lon" : -2.0546, "lat" : 51.4426, "altitude" : 6187.44}
+{ "high" : "true", "id" : "4ca24d", "country" : "Ireland", "lon" : -0.1047, "lat" : 51.7529, "altitude" : 4983.48}
+{ "high" : "false", "id" : "407373", "country" : "United Kingdom", "lon" : -0.4829, "lat" : 51.2388, "altitude" : 419.1}
+{ "high" : "false", "id" : "4036d5", "country" : "United Kingdom", "lon" : -1.6253, "lat" : 52.8543, "altitude" : 160.02}
+{ "high" : "false", "id" : "400a76", "country" : "United Kingdom", "lon" : -0.826, "lat" : 51.3285, "altitude" : 213.36}
+{ "high" : "false", "id" : "407017", "country" : "United Kingdom", "lon" : -1.002, "lat" : 52.364, "altitude" : 487.68}
+{ "high" : "false", "id" : "407070", "country" : "United Kingdom", "lon" : -2.3615, "lat" : 53.4753, "altitude" : 281.94}
+{ "high" : "true", "id" : "4caaec", "country" : "Ireland", "lon" : -5.9017, "lat" : 53.6271, "altitude" : 4373.88}
+{ "high" : "true", "id" : "4cc52a", "country" : "Iceland", "lon" : -3.3873, "lat" : 53.7987, "altitude" : 9982.2}
+{ "high" : "false", "id" : "4cab37", "country" : "Ireland", "lon" : -7.055, "lat" : 52.1705, "altitude" : 342.9}
+{ "high" : "true", "id" : "aafbdf", "country" : "United States", "lon" : -7.7497, "lat" : 54.7836, "altitude" : 12390.12}
+{ "high" : "false", "id" : "407b52", "country" : "United Kingdom", "lon" : -2.0215, "lat" : 57.2003, "altitude" : 419.1}
+{ "high" : "false", "id" : "403352", "country" : "United Kingdom", "lon" : 0.9032, "lat" : 51.8441, "altitude" : 495.3}
+{ "high" : "true", "id" : "43ec96", "country" : "United Kingdom", "lon" : -9.1247, "lat" : 53.2629, "altitude" : 9479.28}
+{ "high" : "true", "id" : "44001e", "country" : "Austria", "lon" : -9.9861, "lat" : 55.2135, "altitude" : 11056.62}
+{ "high" : "false", "id" : "4079d6", "country" : "United Kingdom", "lon" : -1.6135, "lat" : 52.1849, "altitude" : 144.78}
+{ "high" : "true", "id" : "4066ce", "country" : "United Kingdom", "lon" : -0.9747, "lat" : 51.2971, "altitude" : 8503.92}
+{ "high" : "false", "id" : "43c8eb", "country" : "United Kingdom", "lon" : -2.5242, "lat" : 52.764, "altitude" : 441.96}
+{ "high" : "false", "id" : "4ac9f2", "country" : "Sweden", "lon" : -6.2905, "lat" : 53.4224, "altitude" : 152.4}
+{ "high" : "false", "id" : "43c8f4", "country" : "United Kingdom", "lon" : -2.9199, "lat" : 52.7505, "altitude" : 205.74}
+{ "high" : "false", "id" : "43c8e1", "country" : "United Kingdom", "lon" : -2.531, "lat" : 52.8759, "altitude" : 182.88}
+{ "high" : "false", "id" : "43c8e3", "country" : "United Kingdom", "lon" : -2.6715, "lat" : 52.7988, "altitude" : 160.02}
+{ "high" : "true", "id" : "4ca813", "country" : "Ireland", "lon" : -1.3384, "lat" : 52.847, "altitude" : 10233.66}
+{ "high" : "true", "id" : "4851af", "country" : "Kingdom of the Netherlands", "lon" : 0.0567, "lat" : 53.4612, "altitude" : 11879.58}
+{ "high" : "true", "id" : "4078b8", "country" : "United Kingdom", "lon" : -3.3266, "lat" : 51.9178, "altitude" : 9608.82}
+{ "high" : "true", "id" : "a9f2c6", "country" : "United States", "lon" : -1.7698, "lat" : 53.2144, "altitude" : 4457.7}
+{ "high" : "true", "id" : "4243c4", "country" : "United Kingdom", "lon" : -0.9292, "lat" : 51.5672, "altitude" : 12771.12}
+{ "high" : "false", "id" : "404c21", "country" : "United Kingdom", "lon" : 0.0172, "lat" : 52.1575, "altitude" : 434.34}
+{ "high" : "true", "id" : "406f7a", "country" : "United Kingdom", "lon" : -7.1116, "lat" : 54.1908, "altitude" : 12710.16}
+{ "high" : "true", "id" : "407637", "country" : "United Kingdom", "lon" : -1.6317, "lat" : 50.403, "altitude" : 3177.54}
+{ "high" : "false", "id" : "406de6", "country" : "United Kingdom", "lon" : 0.9545, "lat" : 50.969, "altitude" : 144.78}
+{ "high" : "true", "id" : "4850f6", "country" : "Kingdom of the Netherlands", "lon" : -3.8992, "lat" : 50.6463, "altitude" : 9989.82}
+{ "high" : "true", "id" : "a2a3d2", "country" : "United States", "lon" : -9.2919, "lat" : 56.8185, "altitude" : 11148.06}
+{ "high" : "true", "id" : "a07dc8", "country" : "United States", "lon" : -8.9467, "lat" : 54.2495, "altitude" : 11094.72}
+{ "high" : "true", "id" : "407463", "country" : "United Kingdom", "lon" : -0.7941, "lat" : 51.8018, "altitude" : 3390.9}
+{ "high" : "true", "id" : "43c2b5", "country" : "United Kingdom", "lon" : -2.7099, "lat" : 52.7133, "altitude" : 4419.6}
+{ "high" : "true", "id" : "405b64", "country" : "United Kingdom", "lon" : -4.4752, "lat" : 55.1576, "altitude" : 6865.62}
+{ "high" : "false", "id" : "4ca224", "country" : "Ireland", "lon" : 0.279, "lat" : 51.9144, "altitude" : 320.04}
+{ "high" : "false", "id" : "4073f5", "country" : "United Kingdom", "lon" : -1.2433, "lat" : 51.1991, "altitude" : 426.72}
+{ "high" : "true", "id" : "a999d2", "country" : "United States", "lon" : -6.5089, "lat" : 51.7989, "altitude" : 11414.76}
+{ "high" : "true", "id" : "3986e4", "country" : "France", "lon" : -3.1106, "lat" : 51.7001, "altitude" : 10858.5}
+{ "high" : "true", "id" : "a6bc3a", "country" : "United States", "lon" : -2.8354, "lat" : 56.7778, "altitude" : 11559.54}
+{ "high" : "true", "id" : "3c4dd7", "country" : "Germany", "lon" : -2.2528, "lat" : 55.1491, "altitude" : 9502.14}
+{ "high" : "true", "id" : "406a91", "country" : "United Kingdom", "lon" : -3.9092, "lat" : 53.7604, "altitude" : 7543.8}
+{ "high" : "true", "id" : "3c6703", "country" : "Germany", "lon" : 0.5144, "lat" : 53.4816, "altitude" : 11871.96}
+{ "high" : "true", "id" : "3c4ab4", "country" : "Germany", "lon" : -4.9786, "lat" : 51.7912, "altitude" : 9906.0}
+{ "high" : "true", "id" : "3c64ef", "country" : "Germany", "lon" : -6.6448, "lat" : 50.7745, "altitude" : 11391.9}
+{ "high" : "false", "id" : "344501", "country" : "Spain", "lon" : -0.0923, "lat" : 51.1617, "altitude" : 449.58}
+{ "high" : "true", "id" : "485785", "country" : "Kingdom of the Netherlands", "lon" : -4.5672, "lat" : 51.6881, "altitude" : 13373.1}
+{ "high" : "false", "id" : "ab00dd", "country" : "United States", "lon" : 0.0385, "lat" : 52.4414, "altitude" : 243.84}
+{ "high" : "true", "id" : "4ca97b", "country" : "Ireland", "lon" : -2.2999, "lat" : 53.4045, "altitude" : 11559.54}
+{ "high" : "false", "id" : "4067e8", "country" : "United Kingdom", "lon" : -0.8717, "lat" : 53.5504, "altitude" : 152.4}
+{ "high" : "true", "id" : "a63dff", "country" : "United States", "lon" : -10.1834, "lat" : 55.9082, "altitude" : 11109.96}
+{ "high" : "false", "id" : "43c8e2", "country" : "United Kingdom", "lon" : -2.7178, "lat" : 52.7806, "altitude" : 434.34}
+{ "high" : "false", "id" : "43c8e8", "country" : "United Kingdom", "lon" : -2.5388, "lat" : 52.785, "altitude" : 441.96}
+{ "high" : "false", "id" : "404e6b", "country" : "United Kingdom", "lon" : -2.5722, "lat" : 53.6279, "altitude" : 411.48}
+{ "high" : "false", "id" : "4ca741", "country" : "Ireland", "lon" : 0.2967, "lat" : 51.9261, "altitude" : 411.48}
+{ "high" : "false", "id" : "406534", "country" : "United Kingdom", "lon" : -2.4146, "lat" : 53.4839, "altitude" : 396.24}
+{ "high" : "false", "id" : "4078ae", "country" : "United Kingdom", "lon" : -2.2601, "lat" : 53.3609, "altitude" : 144.78}
+{ "high" : "false", "id" : "407931", "country" : "United Kingdom", "lon" : -1.7411, "lat" : 57.3895, "altitude" : 358.14}
+{ "high" : "false", "id" : "407685", "country" : "United Kingdom", "lon" : -2.8236, "lat" : 53.2485, "altitude" : 365.76}
+{ "high" : "false", "id" : "4074bf", "country" : "United Kingdom", "lon" : -0.1179, "lat" : 51.1998, "altitude" : 358.14}
+{ "high" : "false", "id" : "4076c8", "country" : "United Kingdom", "lon" : -2.2438, "lat" : 51.3317, "altitude" : 419.1}
+{ "high" : "true", "id" : "407794", "country" : "United Kingdom", "lon" : -6.2346, "lat" : 53.7973, "altitude" : 12077.7}
+{ "high" : "true", "id" : "484b91", "country" : "Kingdom of the Netherlands", "lon" : 0.8715, "lat" : 51.9208, "altitude" : 9646.92}
+{ "high" : "true", "id" : "49d407", "country" : "Czech Republic", "lon" : -3.3782, "lat" : 51.105, "altitude" : 12138.66}
+{ "high" : "false", "id" : "407755", "country" : "United Kingdom", "lon" : 0.0902, "lat" : 52.4914, "altitude" : 60.96}
+{ "high" : "false", "id" : "400aca", "country" : "United Kingdom", "lon" : -0.5506, "lat" : 52.0142, "altitude" : 487.68}
+{ "high" : "false", "id" : "406d68", "country" : "United Kingdom", "lon" : -2.1608, "lat" : 51.8896, "altitude" : 83.82}
+{ "high" : "false", "id" : "49d31f", "country" : "Czech Republic", "lon" : 0.0619, "lat" : 51.3695, "altitude" : 426.72}
+{ "high" : "false", "id" : "401e80", "country" : "United Kingdom", "lon" : -1.0678, "lat" : 52.9421, "altitude" : 320.04}
+{ "high" : "true", "id" : "a2659a", "country" : "United States", "lon" : -8.1795, "lat" : 53.7777, "altitude" : 11102.34}
+{ "high" : "false", "id" : "45d9d3", "country" : "Denmark", "lon" : -4.3957, "lat" : 54.0863, "altitude" : 457.2}
+{ "high" : "true", "id" : "c0293e", "country" : "Canada", "lon" : 0.4308, "lat" : 51.0935, "altitude" : 12496.8}
+{ "high" : "false", "id" : "7fffff", "country" : "Australia", "lon" : -1.1709, "lat" : 50.7226, "altitude" : 464.82}
+{ "high" : "true", "id" : "aaea8c", "country" : "United States", "lon" : -8.5274, "lat" : 54.1293, "altitude" : 10469.88}
+{ "high" : "true", "id" : "a254d6", "country" : "United States", "lon" : -8.2977, "lat" : 51.6728, "altitude" : 12047.22}
+{ "high" : "false", "id" : "406a79", "country" : "United Kingdom", "lon" : -1.8163, "lat" : 57.4217, "altitude" : 365.76}

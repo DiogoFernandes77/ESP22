@@ -1,16 +1,18 @@
 package com.example.kafka.kafka_demo.services;
 
-public class Flight {
+import java.io.Serializable;
 
-    String id;
-    String country;
-    double lat;
-    double lon;
-    double altitude;
+public class Flight implements Serializable{
+
+    private String id;
+    private String country;
+    private double lat;
+    private double lon;
+    private double altitude;
 
     public Flight (String id, String country, double lon, double lat, double altitude){
-        this.id = id.replaceAll(" ","");
-        this.country = country.replaceAll(" ","");
+        this.id = id.trim();
+        this.country = country.trim();
         this.lon = lon;
         this.lat = lat;
         this.altitude = altitude;

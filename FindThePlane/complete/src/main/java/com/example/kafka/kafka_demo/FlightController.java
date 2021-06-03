@@ -3,7 +3,6 @@ package com.example.kafka.kafka_demo;
 import org.json.*;
 import java.io.*;
 import java.util.*;
-import java.util.ArrayList;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -23,7 +22,7 @@ public class FlightController {
 	@GetMapping("/flights")
 	public String flights(@RequestParam(name="name", required=false, defaultValue="idk") String name, Model model) {
 
-    ArrayList<String> flightsAL = new ArrayList<String>();
+    ArrayList<Flight> flights = new ArrayList<Flight>();
 
     try {
       File f = new File("myJson.json");
@@ -40,7 +39,7 @@ public class FlightController {
 						double lat = (Double) o.get("lat");
 						double altitude = (Double) o.get("altitude");
 						Flight f1 = new Flight(id, country, lon, lat, altitude);
-						flightsAL.add(f1.toString());
+						flights.add(f1);
 				}catch (JSONException err){
      				err.printStackTrace();
 				}
@@ -48,13 +47,6 @@ public class FlightController {
       r.close();
     } catch (FileNotFoundException ex) {
       ex.printStackTrace();
-    }
-    String [] flights = new String[flightsAL.size()];
-
-    int i = 0;
-    for (String f : flightsAL) {
-      flights[i] = f;
-      i++;
     }
 
 		model.addAttribute("name", flights);
@@ -64,7 +56,7 @@ public class FlightController {
 	@GetMapping("/lowflights")
 	public String lowflights(@RequestParam(name="name", required=false, defaultValue="idk") String name, Model model) {
 
-    ArrayList<String> flightsAL = new ArrayList<String>();
+    ArrayList<Flight> flights = new ArrayList<Flight>();
 
     try {
       File f = new File("myJson.json");
@@ -82,7 +74,7 @@ public class FlightController {
 						double altitude = (Double) o.get("altitude");
 						Flight f1 = new Flight(id, country, lon, lat, altitude);
 						if(high.equals("false"))
-								flightsAL.add(f1.toString());
+								flights.add(f1);
 				}catch (JSONException err){
      				err.printStackTrace();
 				}
@@ -90,13 +82,6 @@ public class FlightController {
       r.close();
     } catch (FileNotFoundException ex) {
       ex.printStackTrace();
-    }
-    String [] flights = new String[flightsAL.size()];
-
-    int i = 0;
-    for (String f : flightsAL) {
-      flights[i] = f;
-      i++;
     }
 
 		model.addAttribute("name", flights);
@@ -106,7 +91,7 @@ public class FlightController {
 	@GetMapping("/highflights")
 	public String highflights(@RequestParam(name="name", required=false, defaultValue="idk") String name, Model model) {
 
-    ArrayList<String> flightsAL = new ArrayList<String>();
+    ArrayList<Flight> flights = new ArrayList<Flight>();
 
     try {
       File f = new File("myJson.json");
@@ -124,7 +109,7 @@ public class FlightController {
 						double altitude = (Double) o.get("altitude");
 						Flight f1 = new Flight(id, country, lon, lat, altitude);
 						if(high.equals("true"))
-								flightsAL.add(f1.toString());
+								flights.add(f1);
 				}catch (JSONException err){
      				err.printStackTrace();
 				}
@@ -132,13 +117,6 @@ public class FlightController {
       r.close();
     } catch (FileNotFoundException ex) {
       ex.printStackTrace();
-    }
-    String [] flights = new String[flightsAL.size()];
-
-    int i = 0;
-    for (String f : flightsAL) {
-      flights[i] = f;
-      i++;
     }
 
 		model.addAttribute("name", flights);

@@ -1,15 +1,33 @@
+/* Always set the map height explicitly to define the size of the div
+ * element that contains the map. */
+
+#map {
+  height: 100%;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
 .container {
   margin-top: 5%;
 }
 
 .dropbtn {
-  background-color: #383838;
+  background-color: #343a40;
   color: white;
-  padding: 12px;
-  font-size: 14px;
+  padding: 8px;
+  font-size: 16px;
   border: none;
 }
-
+.active {
+  color: white;
+}
 .dropdown {
   position: relative;
   display: inline-block;
@@ -31,8 +49,10 @@
   display: block;
 }
 
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
 
 .dropdown:hover .dropdown-content {display: block;}
 
-.dropdown:hover .dropbtn {background-color: #000000;}
+.dropdown:hover .dropbtn {color: white;}

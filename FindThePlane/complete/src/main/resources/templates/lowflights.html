@@ -14,26 +14,43 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="/flights">Flights<span class="sr-only">(current)</span></a>
+        <li class="nav-item dropdown active">
+          <a class="nav-link dropbtn" href="/flights" >Flights</a>
+          <div class="dropdown-content">
+            <a href="lowflights">Low Flights</a>
+            <a href="highflights">High Flights</a>
+          </div>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/map">Map</a>
         </li>
-        <li class="dropdown">
-        <button class="dropbtn" href="/flights" >Flights</button>
-        <div class="dropdown-content">
-        <a href="lowflights">Low Flights</a>
-        <a href="highflights">High Flights</a>
-        </div>
-        </li>
       </ul>
     </div>
   </nav>
-    <div class="container">
-      <ul class="list-group" th:each="flight : ${name}">
-        <li class="list-group-item list-group-item-dark" th:text="${flight}"></li>
-      </ul>
-    </div>
+  <div class="container">
+    <!-- <ul class="list-group" th:each="flight : ${name}">
+      <li class="list-group-item list-group-item-dark" th:text="${flight}"></li>
+    </ul> -->
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Origin Country</th>
+          <th scope="col">Latitude</th>
+          <th scope="col">Longitude</th>
+          <th scope="col">Altitude</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr th:each="flight: ${name}">
+            <td scope="row" th:text="${flight.id}" />
+            <td scope="row" th:text="${flight.country}" />
+            <td scope="row" th:text="${flight.lat}" />
+            <td scope="row" th:text="${flight.lon}" />
+            <td scope="row" th:text="${flight.altitude}" />
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </body>
 </html>

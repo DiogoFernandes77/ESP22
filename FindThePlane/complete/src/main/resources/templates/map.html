@@ -3,7 +3,8 @@
   <head>
     <title>Simple Map</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="main.css" media="screen" />
     <!-- <script src="/js/index.js"></script> -->
 
 
@@ -16,18 +17,15 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropbtn" href="/flights" >Flights</a>
+            <div class="dropdown-content">
+              <a href="lowflights">Low Flights</a>
+              <a href="highflights">High Flights</a>
+            </div>
+          </li>
           <li class="nav-item active">
-            <a class="nav-link" href="/flights">Flights<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="/map">Map</a>
-          </li>
-          <li class="dropdown">
-          <button class="dropbtn" href="/flights" >Flights</button>
-          <div class="dropdown-content">
-          <a href="lowflights">Low Flights</a>
-          <a href="highflights">High Flights</a>
-          </div>
           </li>
         </ul>
       </div>
