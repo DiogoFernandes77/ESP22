@@ -1,9 +1,11 @@
 package com.example.kafka.kafka_demo.services;
 
-public class Coordinates {
+import java.io.Serializable;
 
-    double lat;
-    double lon;
+public class Coordinates implements Serializable {
+
+    public double lat;
+    public double lon;
 
     public Coordinates (double lon, double lat){
         this.lon = lon;
