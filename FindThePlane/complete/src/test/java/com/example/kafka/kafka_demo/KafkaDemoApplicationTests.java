@@ -1,13 +1,13 @@
-package com.example.kafka.kafka_demo;
+// package com.example.kafka.kafka_demo;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+// import org.junit.jupiter.api.Test;
+// import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-class KafkaDemoApplicationTests {
+// @SpringBootTest
+// class KafkaDemoApplicationTests {
 
-    @Test
-    void contextLoads() {
-    }
+//     @Test
+//     void contextLoads() {
+//     }
 
-}
+// }
