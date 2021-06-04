@@ -21,15 +21,23 @@ pipeline {
             }
         }
         
-        stage('artifactory') {
+        stage('testing') {
             steps {
                 dir("FindThePlane/complete") {
-                    sh 'mvn -X -Dmaven.test.skip=true --settings ../settings.xml deploy'
-                    sh 'ls'
                     sh 'mvn test'
                 }
             }
         }
+        
+        stage('artifactory') {
+            steps {
+                dir("FindThePlane/complete") {
+                    sh 'mvn -X -Dmaven.test.skip=true --settings ../settings.xml deploy'
+                   
+                }
+            }
+        }
+        
       
         stage('build and deploy image') {
             steps{
