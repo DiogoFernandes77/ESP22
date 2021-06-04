@@ -1,26 +1,55 @@
 pipeline {
-agent any
-stages {
-stage ('Compile Stage') {
-steps {
-withMaven(maven : 'apache-maven-3.6.3') {
-bat'mvn clean compile'
+    agent any
+    environment {
+        dockerImage = ''
+        registry = "http://192.168.160.48:5000"
+      }
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+         
+        stage('Cloning repository') {
+            steps {
+                git(
+                    branch: 'main',
+                    url: 'https://github.com/DiogoFernandes77/ESP22'
+                )
+                sh "chmod +x -R ${env.WORKSPACE}"
+            }
+        }
+        
+        stage('artifactory') {
+            steps {
+                dir("FindThePlane/complete") {
+                    sh 'mvn -X -Dmaven.test.skip=true --settings ../settings.xml deploy'
+                    sh 'ls'
+                    sh 'mvn test'
+                }
+            }
+        }
+      
+        stage('build and deploy image') {
+            steps{
+                script{
+                    dockerImage = docker.build("esp22_findtheplane","./FindThePlane/complete") 
+                    docker.withRegistry(registry) {
+                            dockerImage.push("$BUILD_NUMBER")
+                            dockerImage.push('latest')
+                    }  
+                }
+                
+            }
+        }
+        
+        
+        
+        
+        
+    }
+        
+    
 }
-}
-}
-stage ('Testing Stage') {
-steps {
-withMaven(maven : 'apache-maven-3.6.3') {
-bat'mvn test'
-}
-}
-}
-stage ('Install Stage') {
-steps {
-withMaven(maven : 'apache-maven-3.6.3') {
-bat'mvn install'
-}
-}
-}
-}
-}
+
