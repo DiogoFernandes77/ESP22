@@ -50,7 +50,7 @@ public class FlightController {
     }
 
 		model.addAttribute("name", flights);
-		return "/flights";
+		return "flights";
 	}
 
 	@GetMapping("/lowflights")
@@ -58,34 +58,37 @@ public class FlightController {
 
     ArrayList<Flight> flights = new ArrayList<Flight>();
 
-    try {
-      File f = new File("myJson.json");
-      Scanner r = new Scanner(f);
-      while (r.hasNextLine()) {
-        String data = r.nextLine();
-				try {
-						JSONObject o = new JSONObject(data);
-						System.out.println(o);
-						String high = (String) o.get("high");
-						String id = (String) o.get("id");
-						String country = (String) o.get("country");
-						double lon = (Double) o.get("lon");
-						double lat = (Double) o.get("lat");
-						double altitude = (Double) o.get("altitude");
-						Flight f1 = new Flight(id, country, lon, lat, altitude);
-						if(high.equals("false"))
-								flights.add(f1);
-				}catch (JSONException err){
-     				err.printStackTrace();
-				}
-      }
-      r.close();
-    } catch (FileNotFoundException ex) {
-      ex.printStackTrace();
-    }
-
+    // try {
+    //   File f = new File("myJson.json");
+    //   Scanner r = new Scanner(f);
+    //   while (r.hasNextLine()) {
+    //     String data = r.nextLine();
+	// 			try {
+	// 					JSONObject o = new JSONObject(data);
+	// 					System.out.println(o);
+	// 					String high = (String) o.get("high");
+	// 					String id = (String) o.get("id");
+	// 					String country = (String) o.get("country");
+	// 					double lon = (Double) o.get("lon");
+	// 					double lat = (Double) o.get("lat");
+	// 					double altitude = (Double) o.get("altitude");
+	// 					Flight f1 = new Flight(id, country, lon, lat, altitude);
+	// 					if(high.equals("false"))
+	// 							flights.add(f1);
+	// 			}catch (JSONException err){
+    //  				err.printStackTrace();
+	// 			}
+    //   }
+    //   r.close();
+    // } catch (FileNotFoundException ex) {
+    //   ex.printStackTrace();
+    // }
+		Flight f1 = new Flight("123","Portugal",0.20, 2.6,69.0);
+		Flight f2 = new Flight("123","Portugal",0.20, 2.6,69.0);
+		flights.add(f1);
+		flights.add(f2);
 		model.addAttribute("name", flights);
-		return "/lowflights";
+		return "lowflights";
 	}
 
 	@GetMapping("/highflights")
@@ -120,7 +123,7 @@ public class FlightController {
     }
 
 		model.addAttribute("name", flights);
-		return "/highflights";
+		return "highflights";
 	}
 
 	@GetMapping("/map")

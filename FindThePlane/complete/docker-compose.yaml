@@ -1,19 +1,24 @@
 version: '2'
 
 services:
-  # springboot-docker-compose-app-container:
-  #   image: springboot-docker-compose-app:1
-  #   build:
-  #     context: ./
-  #     dockerfile: Dockerfile
-  #   volumes:
-  #     - /springboot-docker-compose-app
-  #   ports:
-  #     - "8080:8080"
-
-  zookeeper:
-    image: wurstmeister/zookeeper
+  springboot-docker-compose-app-container:
+    image: springboot-docker-compose-app:1
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - /complete
     ports:
+      - "8082:8082"
+    depends_on: 
+      - kafka
+    links:
+      - kafka:kafka
+  
+  
+  zookeeper:
+      image: wurstmeister/zookeeper
+      ports:
         - "2181:2181"
 
   kafka:
@@ -21,8 +26,12 @@ services:
     image: wurstmeister/kafka
     ports:
       - "9092:9092"
+    depends_on: 
+      - zookeeper
+    links:
+      - zookeeper:zookeeper
     environment:
-      KAFKA_ADVERTISED_HOST_NAME: localhost
+      KAFKA_ADVERTISED_HOST_NAME: kafka
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
@@ -56,3 +65,4 @@ services:
 #
 # volumes:
 #   my-db:
+
