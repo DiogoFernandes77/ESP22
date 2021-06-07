@@ -2,8 +2,12 @@ package com.example.kafka.kafka_demo.services;
 
 import java.io.*;
 import java.net.*;
+
+import com.example.kafka.kafka_demo.model.FlightsRepository;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,6 +15,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Service
 public class ConsumerClass {
     private static final Logger logger = LoggerFactory.getLogger(ConsumerClass.class);
+
+    @Autowired
+	  private FlightsRepository flight_repository;
 
     @KafkaListener(topics = "user")
     public void consume(String message) {
@@ -48,6 +55,7 @@ public class ConsumerClass {
 
                 try(FileWriter fw = new FileWriter("myJson.json", true)) {
 
+                    flight_repository.save(f1);
                     fw.write(f1.toJsonLow() + "\n");
                     fw.flush();
 

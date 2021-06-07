@@ -1,7 +1,16 @@
 package com.example.kafka.kafka_demo.model;
 
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+
 public class Plane {
 
+    
+    
     private String icao24;
     private String origin_country;
     private float geo_altitude;

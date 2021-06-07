@@ -3,11 +3,13 @@ package com.example.kafka.kafka_demo;
 import org.json.*;
 import java.io.*;
 import java.util.*;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import com.example.kafka.kafka_demo.services.*;
-
+import com.example.kafka.kafka_demo.model.FlightsRepository;
 @Controller
 public class FlightController {
 
@@ -19,6 +21,8 @@ public class FlightController {
 	// 	return "greeting";
 	// }
 
+	
+	
 	@GetMapping("/flights")
 	public String flights(@RequestParam(name="name", required=false, defaultValue="idk") String name, Model model) {
 
@@ -58,35 +62,32 @@ public class FlightController {
 
     ArrayList<Flight> flights = new ArrayList<Flight>();
 
-    // try {
-    //   File f = new File("myJson.json");
-    //   Scanner r = new Scanner(f);
-    //   while (r.hasNextLine()) {
-    //     String data = r.nextLine();
-	// 			try {
-	// 					JSONObject o = new JSONObject(data);
-	// 					System.out.println(o);
-	// 					String high = (String) o.get("high");
-	// 					String id = (String) o.get("id");
-	// 					String country = (String) o.get("country");
-	// 					double lon = (Double) o.get("lon");
-	// 					double lat = (Double) o.get("lat");
-	// 					double altitude = (Double) o.get("altitude");
-	// 					Flight f1 = new Flight(id, country, lon, lat, altitude);
-	// 					if(high.equals("false"))
-	// 							flights.add(f1);
-	// 			}catch (JSONException err){
-    //  				err.printStackTrace();
-	// 			}
-    //   }
-    //   r.close();
-    // } catch (FileNotFoundException ex) {
-    //   ex.printStackTrace();
-    // }
-		Flight f1 = new Flight("123","Portugal",0.20, 2.6,69.0);
-		Flight f2 = new Flight("123","Portugal",0.20, 2.6,69.0);
-		flights.add(f1);
-		flights.add(f2);
+    try {
+      File f = new File("myJson.json");
+      Scanner r = new Scanner(f);
+      while (r.hasNextLine()) {
+        String data = r.nextLine();
+				try {
+						JSONObject o = new JSONObject(data);
+						System.out.println(o);
+						String high = (String) o.get("high");
+						String id = (String) o.get("id");
+						String country = (String) o.get("country");
+						double lon = (Double) o.get("lon");
+						double lat = (Double) o.get("lat");
+						double altitude = (Double) o.get("altitude");
+						Flight f1 = new Flight(id, country, lon, lat, altitude);
+						if(high.equals("false"))
+								flights.add(f1);
+				}catch (JSONException err){
+     				err.printStackTrace();
+				}
+      }
+      r.close();
+    } catch (FileNotFoundException ex) {
+      ex.printStackTrace();
+    }
+		
 		model.addAttribute("name", flights);
 		return "lowflights";
 	}

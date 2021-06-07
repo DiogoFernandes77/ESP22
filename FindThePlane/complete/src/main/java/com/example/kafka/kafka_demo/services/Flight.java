@@ -2,8 +2,17 @@ package com.example.kafka.kafka_demo.services;
 
 import java.io.Serializable;
 
-public class Flight implements Serializable{
 
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+
+@Entity
+public class Flight implements Serializable{
+    
     private String id;
     private String country;
     private double lat;
