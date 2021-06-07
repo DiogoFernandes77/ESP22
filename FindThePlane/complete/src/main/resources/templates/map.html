@@ -80,8 +80,8 @@
           flights.forEach(flight =>{
             new google.maps.Marker({position: new google.maps.LatLng(flight.Latitude, flight.Longitude),
                   icon: {
-                      href: 'https://mpng.subpng.com/20180414/fcq/kisspng-airplane-icon-a5-computer-icons-flight-airplane-5ad24caf000348.7365708515237316310001.jpg',
-                      scaledSize: new google.maps.Size(25, 25)
+                      url: 'https://raw.githubusercontent.com/DiogoFernandes77/ESP22/main/FindThePlane/complete/src/main/resources/templates/airplane.png',
+                      scaledSize: new google.maps.Size(30, 30)
                   }
               }).setMap(map);
           });
