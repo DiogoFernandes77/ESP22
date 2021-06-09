@@ -48,14 +48,14 @@ public class ConsumerClass {
               if (alt < 500) {
                 Flight f1 = new Flight(parameters[0].replaceAll("\"",""), parameters[2].replaceAll("\"",""), lon, lat, alt);
                 logger.info(String.format("--> %s", f1));
-
+                
                 String line;
                 File file = new File("myJson.json");
                 BufferedReader br = new BufferedReader(new FileReader(file));
 
                 try(FileWriter fw = new FileWriter("myJson.json", true)) {
 
-                    flight_repository.save(f1);
+                    
                     fw.write(f1.toJsonLow() + "\n");
                     fw.flush();
 

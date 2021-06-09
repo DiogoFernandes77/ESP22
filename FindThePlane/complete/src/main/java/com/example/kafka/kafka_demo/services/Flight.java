@@ -12,7 +12,9 @@ import javax.persistence.Id;
 
 @Entity
 public class Flight implements Serializable{
-    
+    @Id @GeneratedValue long identifier;
+
+   
     private String id;
     private String country;
     private double lat;
@@ -26,7 +28,13 @@ public class Flight implements Serializable{
         this.lat = lat;
         this.altitude = altitude;
     }
+    public long getIdentifier() {
+        return this.identifier;
+    }
 
+    public void setIdentifier(long identifier) {
+        this.identifier = identifier;
+    }
     public void setId(String id){
         this.id=id;
     }

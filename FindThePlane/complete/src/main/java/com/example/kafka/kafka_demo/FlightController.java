@@ -21,13 +21,15 @@ public class FlightController {
 	// 	return "greeting";
 	// }
 
-	
+	@Autowired
+	private FlightsRepository flight_repository;
 	
 	@GetMapping("/flights")
 	public String flights(@RequestParam(name="name", required=false, defaultValue="idk") String name, Model model) {
 
     ArrayList<Flight> flights = new ArrayList<Flight>();
-
+	Flight f2 = new Flight("123","Portugal", 12.2, 12.2, 12.2);
+	flight_repository.save(f2);
     try {
       File f = new File("myJson.json");
       Scanner r = new Scanner(f);
