@@ -23,109 +23,26 @@ public class FlightController {
 
 	@Autowired
 	private FlightsRepository flight_repository;
-	
+
+
 	@GetMapping("/flights")
 	public String flights(@RequestParam(name="name", required=false, defaultValue="idk") String name, Model model) {
 
-    ArrayList<Flight> flights = new ArrayList<Flight>();
-	Flight f2 = new Flight("123","Portugal", 12.2, 12.2, 12.2);
-	flight_repository.save(f2);
-    try {
-      File f = new File("myJson.json");
-      Scanner r = new Scanner(f);
-			while (r.hasNextLine()) {
-        String data = r.nextLine();
-				try {
-						JSONObject o = new JSONObject(data);
-						System.out.println(o);
-						String high = (String) o.get("high");
-						String id = (String) o.get("id");
-						String country = (String) o.get("country");
-						double lon = (Double) o.get("lon");
-						double lat = (Double) o.get("lat");
-						double altitude = (Double) o.get("altitude");
-						Flight f1 = new Flight(id, country, lon, lat, altitude);
-						flights.add(f1);
-				}catch (JSONException err){
-     				err.printStackTrace();
-				}
-      }
-      r.close();
-    } catch (FileNotFoundException ex) {
-      ex.printStackTrace();
-    }
-
-		model.addAttribute("name", flights);
+		model.addAttribute("name", flight_repository.findAll());
 		return "flights";
 	}
 
 	@GetMapping("/lowflights")
 	public String lowflights(@RequestParam(name="name", required=false, defaultValue="idk") String name, Model model) {
 
-    ArrayList<Flight> flights = new ArrayList<Flight>();
-
-    try {
-      File f = new File("myJson.json");
-      Scanner r = new Scanner(f);
-      while (r.hasNextLine()) {
-        String data = r.nextLine();
-				try {
-						JSONObject o = new JSONObject(data);
-						System.out.println(o);
-						String high = (String) o.get("high");
-						String id = (String) o.get("id");
-						String country = (String) o.get("country");
-						double lon = (Double) o.get("lon");
-						double lat = (Double) o.get("lat");
-						double altitude = (Double) o.get("altitude");
-						Flight f1 = new Flight(id, country, lon, lat, altitude);
-						if(high.equals("false"))
-								flights.add(f1);
-				}catch (JSONException err){
-     				err.printStackTrace();
-				}
-      }
-      r.close();
-    } catch (FileNotFoundException ex) {
-      ex.printStackTrace();
-    }
-		
-		model.addAttribute("name", flights);
+		model.addAttribute("name", flight_repository.findAllLowFlights());
 		return "lowflights";
 	}
 
 	@GetMapping("/highflights")
 	public String highflights(@RequestParam(name="name", required=false, defaultValue="idk") String name, Model model) {
 
-    ArrayList<Flight> flights = new ArrayList<Flight>();
-
-    try {
-      File f = new File("myJson.json");
-      Scanner r = new Scanner(f);
-      while (r.hasNextLine()) {
-        String data = r.nextLine();
-				try {
-						JSONObject o = new JSONObject(data);
-						System.out.println(o);
-						String high = (String) o.get("high");
-						String id = (String) o.get("id");
-						String country = (String) o.get("country");
-						double lon = (Double) o.get("lon");
-						double lat = (Double) o.get("lat");
-						double altitude = (Double) o.get("altitude");
-						Flight f1 = new Flight(id, country, lon, lat, altitude);
-						if(high.equals("true"))
-								flights.add(f1);
-				}catch (JSONException err){
-     				err.printStackTrace();
-				}
-      }
-      r.close();
-    } catch (FileNotFoundException ex) {
-      ex.printStackTrace();
-    }
-
-		model.addAttribute("name", flights);
+		model.addAttribute("name", flight_repository.findAllHighFlights());
 		return "highflights";
 	}
 
@@ -133,30 +50,13 @@ public class FlightController {
 	public String history(@RequestParam(name="name", required=false, defaultValue="idk") String name, Model model) {
 
 		ArrayList<Coordinates> coordinates = new ArrayList<Coordinates>();
-		// Coordinates c1 = new Coordinates(52.3, 4.4);
-		// Coordinates c2 = new Coordinates(52.3, 3.4);
-		// coordinates.add(c1);
-		// coordinates.add(c2);
-    try {
-      File f = new File("myJson.json");
-      Scanner r = new Scanner(f);
-      while (r.hasNextLine()) {
-        String data = r.nextLine();
-				try {
-						JSONObject o = new JSONObject(data);
-						double lon = (Double) o.get("lon");
-						double lat = (Double) o.get("lat");
-						Coordinates c = new Coordinates(lon, lat);
-						System.out.println(lat + " " + lon);
-						coordinates.add(c);
-				}catch (JSONException err){
-     				err.printStackTrace();
-				}
-      }
-      r.close();
-    } catch (FileNotFoundException ex) {
-      ex.printStackTrace();
-    }
+
+		for (Flight f : flight_repository.findAll()) {
+			double lon = (Double) f.getLon();
+			double lat = (Double) f.getLat();
+			Coordinates c = new Coordinates(lon, lat);
+			coordinates.add(c);
+		}
 
 		model.addAttribute("coords", coordinates);
 		return "map";

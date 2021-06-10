@@ -14,12 +14,14 @@ import javax.persistence.Id;
 public class Flight implements Serializable{
     @Id @GeneratedValue long identifier;
 
-   
+
     private String id;
     private String country;
     private double lat;
     private double lon;
     private double altitude;
+
+    public Flight() {}
 
     public Flight (String id, String country, double lon, double lat, double altitude){
         this.id = id.trim();
