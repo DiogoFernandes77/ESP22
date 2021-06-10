@@ -21,10 +21,10 @@ pipeline {
             }
         }
         
-        stage('testing') {
+        stage('build and test') {
             steps {
                 dir("FindThePlane/complete") {
-                    sh 'mvn test'
+                    sh 'mvn clean install'
                 }
             }
         }
@@ -46,13 +46,31 @@ pipeline {
                     docker.withRegistry(registry) {
                             dockerImage.push("$BUILD_NUMBER")
                             dockerImage.push('latest')
-                    }  
+                    }
+                    dockerImage = docker.build("producer-python","./Producer") 
+                    docker.withRegistry(registry) {
+                            dockerImage.push("$BUILD_NUMBER")
+                            dockerImage.push('latest')
+                    }    
                 }
                 
             }
         }
         
+        stage('Remote Controll){
+        	steps{
+			sshagent (credentials: ['esp22_playground']){
+			catchError(buildResult: 'SUCCESS', stageResult: 'SUCCESS'){
+                        sh 'ssh -o StrictHostKeyChecking=no esp22@192.168.160.87 docker stop esp22_findtheplane
+                        sh 'ssh -o StrictHostKeyChecking=no esp22@192.168.160.87 docker rm  esp22_findtheplane'
+                        sh 'ssh -o StrictHostKeyChecking=no esp22@192.168.160.87 docker rmi  192.168.160.48:5000/esp22_findtheplane'
+                    }
+			}
+			
+        	}
         
+        
+        }
         
         
         

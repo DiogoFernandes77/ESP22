@@ -8,9 +8,9 @@ services:
       - "3306:3306"
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: Diogofernandes
+      MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: db_esp22
-      MYSQL_PASSWORD: Diogofernandes
+      MYSQL_PASSWORD: root
    
       
   springboot-docker-compose-app-container:
@@ -30,9 +30,9 @@ services:
       - kafka:kafka
       - es_mysql:es_mysql
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:mysql://es_mysql:3306/db_esp22?user=root&password=Diogofernandes
+      - SPRING_DATASOURCE_URL=jdbc:mysql://es_mysql:3306/db_esp22?user=root&password=root
       - SPRING_DATASOURCE_USERNAME=root
-      - SPRING_DATASOURCE_PASSWORD=Diogofernandes
+      - SPRING_DATASOURCE_PASSWORD=root
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
 
   
