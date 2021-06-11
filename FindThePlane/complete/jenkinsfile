@@ -24,7 +24,7 @@ pipeline {
         stage('build and test') {
             steps {
                 dir("FindThePlane/complete") {
-                    sh 'mvn clean install'
+                    sh 'mvn clean install -Dmaven.test.skip=true'
                 }
             }
         }
