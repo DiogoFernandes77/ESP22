@@ -57,7 +57,7 @@ pipeline {
             }
         }
         
-        stage('Remote Controll){
+        stage('Remote Controll'){
         	steps{
 			sshagent (credentials: ['esp22_playground']){
 			catchError(buildResult: 'SUCCESS', stageResult: 'SUCCESS'){
