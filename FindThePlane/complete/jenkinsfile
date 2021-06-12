@@ -31,14 +31,14 @@ pipeline {
 
         stage('Integration tests') {
             steps{
-                dir('data-processor'){
+                dir('FindThePlane/complete'){
                     script{
                         try {
                             sh "mvn test"
                         } catch(err) {
-                            //step([$class: 'JUnitResultArchiver', testResults:
-                            //'**/target/surefire-reports/TEST-'
-                            //    + '*IntegrationTest.xml'])
+                            step([$class: 'JUnitResultArchiver', testResults:
+                            '**/target/surefire-reports/TEST-'
+                                + '*IntegrationTest.xml'])
                             throw err
                         }
                     }
