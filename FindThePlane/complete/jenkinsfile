@@ -23,11 +23,11 @@ pipeline {
 
         stage('Integration tests') {
             steps{
-                dir('FindThePlane/complete'){
+
                     script{
                         sh "mvn test"//-Pintegration"
                     }
-                }
+                
             }
         }
 
