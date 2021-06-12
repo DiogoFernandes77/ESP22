@@ -34,7 +34,7 @@ pipeline {
                 dir('FindThePlane/complete'){
                     script{
                         try {
-                            sh "mvn test"
+                            sh "mvn test -P"
                         } catch(err) {
                             //step([$class: 'JUnitResultArchiver', testResults:
                             //'**/target/surefire-reports/TEST-'
