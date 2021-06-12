@@ -25,18 +25,8 @@ pipeline {
             steps{
                 dir('FindThePlane/complete'){
                     script{
-                        try {
-                            sh "mvn test"
-                        } catch(err) {
-                            //step([$class: 'JUnitResultArchiver', testResults:
-                            //'**/target/surefire-reports/TEST-'
-                            //    + '*IntegrationTest.xml'])
-                            throw err
-                        }
+                        sh "mvn test"//-Pintegration"
                     }
-                    //step([$class: 'JUnitResultArchiver', testResults:
-                    //    '**/target/surefire-reports/TEST-'
-                    //        + '*IntegrationTest.xml'])
                 }
             }
         }
@@ -79,17 +69,17 @@ pipeline {
             }
         }
         
-        stage('Remote Controll'){
-        	steps{
-			sshagent (credentials: ['esp22_playground']){
-			catchError(buildResult: 'SUCCESS', stageResult: 'SUCCESS'){
-                        sh 'ssh -o StrictHostKeyChecking=no esp22@192.168.160.87 docker stop esp22_findtheplane'
-                        sh 'ssh -o StrictHostKeyChecking=no esp22@192.168.160.87 docker rm  esp22_findtheplane'
-                        sh 'ssh -o StrictHostKeyChecking=no esp22@192.168.160.87 docker rmi  192.168.160.48:5000/esp22_findtheplane'
-                    }
-			}
+        //stage('Remote Controll'){
+        //	steps{
+		//	sshagent (credentials: ['esp22_playground']){
+		//	catchError(buildResult: 'SUCCESS', stageResult: 'SUCCESS'){
+        //                sh 'ssh -o StrictHostKeyChecking=no esp22@192.168.160.87 docker stop esp22_findtheplane'
+        //                sh 'ssh -o StrictHostKeyChecking=no esp22@192.168.160.87 docker rm  esp22_findtheplane'
+        //                sh 'ssh -o StrictHostKeyChecking=no esp22@192.168.160.87 docker rmi  192.168.160.48:5000/esp22_findtheplane'
+        //            }
+		//	}
 			
-        	}
+        //	}
         
         
         }
