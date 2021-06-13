@@ -40,7 +40,8 @@ pipeline {
                 }
             }
         }
-
+        sh "sleep(15)"
+        
         stage('Integration tests') {
             steps{
                 dir('FindThePlane/complete'){
