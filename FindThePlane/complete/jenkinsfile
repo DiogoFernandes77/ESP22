@@ -41,7 +41,7 @@ pipeline {
             }
         }
 
-       
+       sleep 30
 
         stage('Integration tests') {
             steps{
