@@ -21,15 +21,6 @@ pipeline {
             }
         }
 
-        stage('Integration tests') {
-            steps{
-                dir('FindThePlane/complete'){
-                    script{
-                        sh "mvn test"//-Pintegration"
-                    }
-                }
-            }
-        }
 
         stage('build') {
             steps {
@@ -49,6 +40,27 @@ pipeline {
                 }
             }
         }
+
+        stage('Integration tests') {
+            steps{
+                dir('FindThePlane/complete'){
+                    script{
+//                        try{
+                            sh "mvn test " //-Pintegration
+//                         } catch(err) {
+//                                 step([$class: 'JUnitResultArchiver', testResults:
+//                                 '**/target/surefire-reports/TEST-'
+//                                     + '*IntegrationTest.xml'])
+//                                 throw err
+//                         }
+                    }
+//                     step([$class: 'JUnitResultArchiver', testResults:
+//                         '**/target/surefire-reports/TEST-'
+//                             + '*IntegrationTest.xml'])
+                }
+            }
+        }
+
         
       
         stage('build and deploy image') {

@@ -20,7 +20,7 @@ import org.springframework.test.web.servlet.MockMvc;
 
 @AutoConfigureMockMvc
 @SpringBootTest(classes = KafkaDemoApplication.class)
-class MainTest {
+class TestMain {
 
     @Autowired
     private FlightController controller;
