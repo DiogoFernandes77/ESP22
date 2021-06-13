@@ -8,7 +8,7 @@ import time
 f = requests.get("https://opensky-network.org/api/states/all?lamin=50.3389&lomin=-10.4962&lamax=58.5229&lomax=1.0026")
 print(f.text)
 
-producer = KafkaProducer(bootstrap_servers=['192.168.160.87:9092'],value_serializer=lambda m: json.dumps(m).encode('ascii'))
+producer = KafkaProducer(bootstrap_servers=['kafka:9092'],value_serializer=lambda m: json.dumps(m).encode('ascii'))
 
 json_object = json.loads(f.text)
 
