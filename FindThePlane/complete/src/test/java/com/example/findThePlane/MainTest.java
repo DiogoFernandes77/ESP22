@@ -38,6 +38,7 @@ class MainTest {
     @Test
    public void requestIndex() throws Exception {
        System.out.println("Request index");
+       fakmfqk
        this.mockMvc.perform(get("/")).andDo(print()).andExpect(status().isOk());
    }
     @Test
