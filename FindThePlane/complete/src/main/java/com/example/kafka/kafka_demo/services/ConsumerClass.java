@@ -19,7 +19,7 @@ public class ConsumerClass {
     @Autowired
 	  private FlightsRepository flight_repository;
 
-    @KafkaListener(topics = "user", groupId = "group_id")
+    @KafkaListener(topics = "user", groupId = "group-1")
     public void consume(String message) {
         if (message.equals("\"delete\"")) {
           flight_repository.deleteAll();
