@@ -21,6 +21,26 @@ pipeline {
             }
         }
 
+
+        stage('build') {
+            steps {
+                dir("FindThePlane/complete") {
+                    sh 'mvn clean install -Dmaven.test.skip=true'
+                }
+            }
+        }
+
+
+        
+        stage('artifactory') {
+            steps {
+                dir("FindThePlane/complete") {
+                    sh 'mvn -X -Dmaven.test.skip=true --settings ../settings.xml deploy'
+                   
+                }
+            }
+        }
+
         stage('Integration tests') {
             steps{
                 dir('FindThePlane/complete'){
@@ -41,24 +61,6 @@ pipeline {
             }
         }
 
-        stage('build') {
-            steps {
-                dir("FindThePlane/complete") {
-                    sh 'mvn clean install -Dmaven.test.skip=true'
-                }
-            }
-        }
-
-
-        
-        stage('artifactory') {
-            steps {
-                dir("FindThePlane/complete") {
-                    sh 'mvn -X -Dmaven.test.skip=true --settings ../settings.xml deploy'
-                   
-                }
-            }
-        }
         
       
         stage('build and deploy image') {
