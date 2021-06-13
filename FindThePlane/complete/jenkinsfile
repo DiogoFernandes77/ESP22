@@ -41,6 +41,10 @@ pipeline {
             }
         }
 
+        stage('wait for kafka setup'){
+            sleep 30
+        }
+
         stage('Integration tests') {
             steps{
                 dir('FindThePlane/complete'){
