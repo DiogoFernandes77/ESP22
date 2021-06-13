@@ -45,18 +45,18 @@ pipeline {
             steps{
                 dir('FindThePlane/complete'){
                     script{
-                        try{
+//                        try{
                             sh "mvn test -Pintegration"
-                        } catch(err) {
-                                step([$class: 'JUnitResultArchiver', testResults:
-                                '**/target/surefire-reports/TEST-'
-                                    + '*IntegrationTest.xml'])
-                                throw err
-                        }
+//                         } catch(err) {
+//                                 step([$class: 'JUnitResultArchiver', testResults:
+//                                 '**/target/surefire-reports/TEST-'
+//                                     + '*IntegrationTest.xml'])
+//                                 throw err
+//                         }
                     }
-                    step([$class: 'JUnitResultArchiver', testResults:
-                        '**/target/surefire-reports/TEST-'
-                            + '*IntegrationTest.xml'])
+//                     step([$class: 'JUnitResultArchiver', testResults:
+//                         '**/target/surefire-reports/TEST-'
+//                             + '*IntegrationTest.xml'])
                 }
             }
         }
