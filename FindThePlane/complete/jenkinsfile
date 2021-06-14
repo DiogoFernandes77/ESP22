@@ -25,6 +25,7 @@ pipeline {
         stage('build') {
             steps {
                 dir("FindThePlane/complete") {
+                    sh'rm -rf target'
                     sh 'mvn clean install -Dmaven.test.skip=true'
                 }
             }
