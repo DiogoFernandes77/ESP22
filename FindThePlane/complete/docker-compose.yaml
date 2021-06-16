@@ -11,8 +11,8 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: db_esp22
       MYSQL_PASSWORD: root
-   
-      
+
+
   springboot-docker-compose-app-container:
     image: springboot-docker-compose-app:1
     restart: on-failure
@@ -23,7 +23,7 @@ services:
       - /complete
     ports:
       - "8082:8082"
-    depends_on: 
+    depends_on:
       - kafka
       - es_mysql
     links:
@@ -35,7 +35,7 @@ services:
       - SPRING_DATASOURCE_PASSWORD=root
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
 
-  
+
   zookeeper:
       image: wurstmeister/zookeeper
       ports:
@@ -48,7 +48,7 @@ services:
       - "9092:9092"
     expose:
       - "9092"
-    depends_on: 
+    depends_on:
       - zookeeper
     links:
       - zookeeper:zookeeper
@@ -56,8 +56,8 @@ services:
     environment:
       KAFKA_ADVERTISED_HOST_NAME: kafka
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-    
-    
+
+
     restart: always
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
@@ -70,10 +70,17 @@ services:
       - "9091:9092"
     depends_on:
       - kafka
-  
-      
-  
-  
+
+ # esp22_logstash:
+ #    build:
+ #      context: logstash/
+ #    container_name: esp22_logstash
+ #      volumes:
+ #        - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
+ #        - ./logstash/pipeline:/usr/share/logstash/pipeline:ro
+ #      ports:
+ #        - "22005:22005/tcp"
+
   # db:
   #   image: mysql:5.6
   #   restart: always
@@ -103,5 +110,3 @@ services:
 #
 # volumes:
 #   my-db:
-
-
