@@ -3,23 +3,18 @@ package com.example.kafka.kafka_demo;
 import org.json.*;
 import java.io.*;
 import java.util.*;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import com.example.kafka.kafka_demo.services.*;
 import com.example.kafka.kafka_demo.model.FlightsRepository;
+
 @Controller
 public class FlightController {
-
-	// @GetMapping("/greeting")
-	// public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
-  //
-  //
-	// 	model.addAttribute("name", "ola");
-	// 	return "greeting";
-	// }
+	private static final Logger logger = LoggerFactory.getLogger(ConsumerClass.class);
 
 	@Autowired
 	private FlightsRepository flight_repository;
@@ -27,6 +22,10 @@ public class FlightController {
 
 	@GetMapping("/flights")
 	public String flights(@RequestParam(name="name", required=false, defaultValue="idk") String name, Model model) {
+
+		for (Flight f : flight_repository.findAll()) {
+			logger.info(String.format("--> %s", f));
+		}
 
 		model.addAttribute("name", flight_repository.findAll());
 		return "flights";
